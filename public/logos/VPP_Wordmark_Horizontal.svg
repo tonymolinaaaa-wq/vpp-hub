@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <title>Valley Painting Pros — horizontal lockup</title>
+  <desc>Mark + wordmark, horizontal arrangement. Convert text to outlines before sending to a print vendor.</desc>
+  <g>
+    <rect x="14" y="22" width="92" height="3" fill="#1a1a1a" fill-opacity="0.32"></rect>
+    <polygon points="16,22 38,22 66,96 44,96" fill="#1a1a1a"></polygon>
+    <polygon points="54,96 82,22 104,22 76,96" fill="#d65a3a"></polygon>
+  </g>
+  <text x="138" y="62" font-family="Archivo Black, sans-serif" font-size="32" fill="#1a1a1a" letter-spacing="-1">VALLEY</text>
+  <text x="138" y="98" font-family="Archivo Black, sans-serif" font-size="32" fill="#d65a3a" letter-spacing="-1">PAINTING <tspan fill="#1a1a1a">PROS</tspan></text>
+</svg>

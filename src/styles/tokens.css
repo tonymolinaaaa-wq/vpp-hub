@@ -1,0 +1,29 @@
+/*
+ * Valley Painting Pros — color tokens
+ * v1.0 · May 2026
+ *
+ * Drop this into your website / app stylesheet. Reference the variables
+ * instead of hard-coding hex codes anywhere downstream.
+ */
+
+:root {
+  /* Primary palette */
+  --vpp-signal:   #d65a3a;  /* Signal Orange — accent only, ~10% of any surface */
+  --vpp-ink:      #1a1a1a;  /* Ink — text, primary neutral */
+  --vpp-bone:     #fbf8f1;  /* Bone — paper / reverse text */
+  --vpp-putty:    #e8e2d3;  /* Putty — surfaces, cards, backgrounds */
+
+  /* Supporting tones (derived, do not invent new ones) */
+  --vpp-mid:      #5a4a3a;  /* Mid — secondary text, metadata */
+  --vpp-rule:     #d9d2c0;  /* Rule — hairlines, dividers */
+
+  /* Semantic aliases */
+  --vpp-bg:           var(--vpp-bone);
+  --vpp-bg-dark:      var(--vpp-ink);
+  --vpp-bg-surface:   var(--vpp-putty);
+  --vpp-text:         var(--vpp-ink);
+  --vpp-text-muted:   var(--vpp-mid);
+  --vpp-text-onDark:  var(--vpp-bone);
+  --vpp-accent:       var(--vpp-signal);
+  --vpp-border:       var(--vpp-rule);
+}

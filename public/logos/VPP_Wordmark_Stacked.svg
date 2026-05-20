@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" width="360" height="200">
+  <title>Valley Painting Pros — stacked lockup</title>
+  <desc>Mark above wordmark. For square contexts (avatar, patch, hangtag). Convert text to outlines before sending to a print vendor.</desc>
+  <g transform="translate(140, 10)">
+    <rect x="14" y="22" width="92" height="3" fill="#1a1a1a" fill-opacity="0.32"></rect>
+    <polygon points="16,22 38,22 66,96 44,96" fill="#1a1a1a"></polygon>
+    <polygon points="54,96 82,22 104,22 76,96" fill="#d65a3a"></polygon>
+  </g>
+  <text x="180" y="170" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="22" fill="#1a1a1a" letter-spacing="-0.5">VALLEY <tspan fill="#d65a3a">PAINTING</tspan> PROS</text>
+</svg>

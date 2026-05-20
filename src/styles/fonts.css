@@ -1,0 +1,34 @@
+/*
+ * Valley Painting Pros — type stacks
+ * Import fonts.html in your <head> first, then use these variables.
+ */
+
+:root {
+  --vpp-font-display: 'Archivo Black', sans-serif;
+  --vpp-font-body:    'Inter', system-ui, sans-serif;
+  --vpp-font-mono:    'IBM Plex Mono', monospace;
+}
+
+/* Display — headlines, wordmark, signage */
+.vpp-display {
+  font-family: var(--vpp-font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* Body — paragraphs, UI, long-form */
+.vpp-body {
+  font-family: var(--vpp-font-body);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* Mono — eyebrows, specs, contact data */
+.vpp-mono {
+  font-family: var(--vpp-font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
