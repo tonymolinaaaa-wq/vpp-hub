@@ -1,6 +1,14 @@
 /*
- * Valley Painting Pros — type stacks
- * Import fonts.html in your <head> first, then use these variables.
+ * Valley Painting Pros — type tokens and utility classes
+ *
+ * @font-face declarations are provided by the @fontsource packages and
+ * imported once in src/layouts/Layout.astro. This file holds VPP-specific
+ * font-family tokens (with system fallbacks) and the three role utilities.
+ *
+ * Three faces only:
+ *   Display — Archivo Black 900, ALL CAPS, tight tracking (headlines only)
+ *   Body    — Inter 400/500/600/700, sentence case (paragraphs, UI)
+ *   Mono    — IBM Plex Mono 400/500/600, ALL CAPS, wide tracking (metadata)
  */
 
 :root {

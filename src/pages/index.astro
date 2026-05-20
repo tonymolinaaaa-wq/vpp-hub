@@ -1,17 +1,50 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Valley Painting Pros — Setup complete">
+  <main class="hero">
+    <p class="eyebrow">Valley Painting Pros · Design system online</p>
+    <h1 class="headline">
+      Setup <span class="accent">complete</span>.
+    </h1>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--vpp-space-16) var(--vpp-space-3);
+    gap: var(--vpp-space-4);
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--vpp-mid);
+  }
+
+  .headline {
+    margin: 0;
+    font-family: var(--vpp-font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: var(--vpp-ink);
+    font-size: clamp(48px, 12vw, 128px);
+  }
+
+  .accent {
+    color: var(--vpp-signal);
+  }
+</style>

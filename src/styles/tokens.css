@@ -1,29 +1,37 @@
 /*
- * Valley Painting Pros — color tokens
- * v1.0 · May 2026
+ * Valley Painting Pros — design tokens
+ * v1.1 · May 2026
  *
- * Drop this into your website / app stylesheet. Reference the variables
- * instead of hard-coding hex codes anywhere downstream.
+ * Reference these variables instead of hard-coding hex codes or px values.
+ * Color and spacing are the only two systems on the site.
  */
 
 :root {
+  color-scheme: light;
+
   /* Primary palette */
-  --vpp-signal:   #d65a3a;  /* Signal Orange — accent only, ~10% of any surface */
-  --vpp-ink:      #1a1a1a;  /* Ink — text, primary neutral */
-  --vpp-bone:     #fbf8f1;  /* Bone — paper / reverse text */
-  --vpp-putty:    #e8e2d3;  /* Putty — surfaces, cards, backgrounds */
+  --vpp-signal:   #D65A3A;  /* Signal Orange — accent only, ~10% of any surface */
+  --vpp-ink:      #1A1A1A;  /* Ink — text, primary neutral, dark backgrounds */
+  --vpp-bone:     #FBF8F1;  /* Bone — page background, paper, reverse text */
+  --vpp-putty:    #E8E2D3;  /* Putty — secondary backgrounds for section rhythm */
+  --vpp-mid:      #5A4A3A;  /* Mid — secondary text, metadata */
+  --vpp-rule:     #D9D2C0;  /* Rule — hairlines, dividers */
 
-  /* Supporting tones (derived, do not invent new ones) */
-  --vpp-mid:      #5a4a3a;  /* Mid — secondary text, metadata */
-  --vpp-rule:     #d9d2c0;  /* Rule — hairlines, dividers */
-
-  /* Semantic aliases */
-  --vpp-bg:           var(--vpp-bone);
-  --vpp-bg-dark:      var(--vpp-ink);
-  --vpp-bg-surface:   var(--vpp-putty);
-  --vpp-text:         var(--vpp-ink);
-  --vpp-text-muted:   var(--vpp-mid);
-  --vpp-text-onDark:  var(--vpp-bone);
-  --vpp-accent:       var(--vpp-signal);
-  --vpp-border:       var(--vpp-rule);
+  /* 8px spacing scale — every margin/padding is a multiple of 8 */
+  --vpp-space-1:   8px;
+  --vpp-space-2:  16px;
+  --vpp-space-3:  24px;
+  --vpp-space-4:  32px;
+  --vpp-space-5:  40px;
+  --vpp-space-6:  48px;
+  --vpp-space-7:  56px;
+  --vpp-space-8:  64px;
+  --vpp-space-9:  72px;
+  --vpp-space-10: 80px;
+  --vpp-space-11: 88px;
+  --vpp-space-12: 96px;
+  --vpp-space-13: 104px;
+  --vpp-space-14: 112px;
+  --vpp-space-15: 120px;
+  --vpp-space-16: 128px;
 }
