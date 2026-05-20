@@ -24,7 +24,20 @@ const navItems = [
     </nav>
 
     <div class="right-cluster">
-      <a href="tel:+14804332680" class="phone">(480) 433-2680</a>
+      <a href="tel:+14804332680" class="phone-text">(480) 433-2680</a>
+
+      <a
+        href="tel:+14804332680"
+        class="phone-icon"
+        aria-label="Call (480) 433-2680"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1.25 1.25 0 0 1 1.28-.3c1.18.4 2.46.62 3.81.62.69 0 1.25.56 1.25 1.25v3.5c0 .69-.56 1.25-1.25 1.25C10.3 23.5.5 13.7.5 1.75.5 1.06 1.06.5 1.75.5h3.5c.69 0 1.25.56 1.25 1.25 0 1.35.22 2.63.62 3.81.13.4.04.85-.3 1.28l-2.2 2.2z"
+          />
+        </svg>
+      </a>
 
       <button
         type="button"
@@ -110,7 +123,8 @@ const navItems = [
     gap: var(--vpp-space-2);
   }
 
-  .phone {
+  .phone-text {
+    display: none;
     font-family: var(--vpp-font-mono);
     font-weight: 500;
     font-size: 13px;
@@ -121,9 +135,30 @@ const navItems = [
     white-space: nowrap;
   }
 
-  .phone:hover,
-  .phone:focus-visible {
+  .phone-text:hover,
+  .phone-text:focus-visible {
     color: var(--vpp-ink);
+  }
+
+  .phone-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--vpp-space-6);
+    height: var(--vpp-space-6);
+    color: var(--vpp-ink);
+    text-decoration: none;
+  }
+
+  .phone-icon svg {
+    width: var(--vpp-space-3);
+    height: var(--vpp-space-3);
+    display: block;
+  }
+
+  .phone-icon:hover,
+  .phone-icon:focus-visible {
+    color: var(--vpp-signal);
   }
 
   .menu-trigger {
@@ -150,11 +185,11 @@ const navItems = [
   .cta {
     font-family: var(--vpp-font-body);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
     color: var(--vpp-bone);
     background-color: var(--vpp-signal);
-    padding: var(--vpp-space-2) var(--vpp-space-3);
+    padding: var(--vpp-space-1) var(--vpp-space-2);
     border-radius: 999px;
     text-decoration: none;
     white-space: nowrap;
@@ -208,16 +243,23 @@ const navItems = [
     }
 
     .menu-trigger,
-    .mobile-panel {
+    .mobile-panel,
+    .phone-icon {
       display: none;
+    }
+
+    .phone-text {
+      display: inline-flex;
+      font-size: 14px;
     }
 
     .right-cluster {
       gap: var(--vpp-space-3);
     }
 
-    .phone {
+    .cta {
       font-size: 14px;
+      padding: var(--vpp-space-2) var(--vpp-space-3);
     }
   }
 </style>
