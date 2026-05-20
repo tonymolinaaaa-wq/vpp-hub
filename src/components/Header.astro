@@ -76,7 +76,7 @@ const navItems = [
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--vpp-space-3);
+    gap: var(--vpp-space-1);
     padding-top: var(--vpp-space-2);
     padding-bottom: var(--vpp-space-2);
     padding-left: clamp(var(--vpp-space-3), 4vw, var(--vpp-space-6));
@@ -91,7 +91,7 @@ const navItems = [
 
   .wordmark img {
     display: block;
-    height: 32px;
+    height: 24px;
     width: auto;
   }
 
@@ -120,7 +120,7 @@ const navItems = [
   .right-cluster {
     display: flex;
     align-items: center;
-    gap: var(--vpp-space-2);
+    gap: var(--vpp-space-1);
   }
 
   .phone-text {
@@ -165,7 +165,7 @@ const navItems = [
     appearance: none;
     background: transparent;
     border: 0;
-    padding: var(--vpp-space-1) var(--vpp-space-2);
+    padding: var(--vpp-space-1);
     margin: 0;
     cursor: pointer;
     font-family: var(--vpp-font-mono);
@@ -236,6 +236,10 @@ const navItems = [
   @media (min-width: 768px) {
     .wordmark img {
       height: 36px;
+    }
+
+    .row {
+      gap: var(--vpp-space-3);
     }
 
     .nav-desktop {
