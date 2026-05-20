@@ -1,0 +1,257 @@
+---
+const navItems = [
+  { label: 'Services', href: '/services' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'About', href: '/about' },
+];
+---
+
+<header id="site-header" class="site-header">
+  <div class="row">
+    <a href="/" class="wordmark" aria-label="Valley Painting Pros — home">
+      <img
+        src="/logos/VPP_Wordmark_Horizontal.svg"
+        alt="Valley Painting Pros"
+        width="156"
+        height="36"
+      />
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      {navItems.map((item) => (
+        <a href={item.href} class="nav-link">{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="right-cluster">
+      <a href="tel:+14804332680" class="phone">(480) 433-2680</a>
+
+      <button
+        type="button"
+        id="menu-trigger"
+        class="menu-trigger"
+        aria-expanded="false"
+        aria-controls="mobile-panel"
+        aria-label="Toggle navigation menu"
+      >
+        Menu
+      </button>
+
+      <a href="/estimate" class="cta">Get Estimate</a>
+    </div>
+  </div>
+
+  <div id="mobile-panel" class="mobile-panel" hidden>
+    <nav role="navigation" aria-label="Mobile">
+      {navItems.map((item) => (
+        <a href={item.href} class="mobile-nav-link">{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--vpp-bone);
+    border-bottom: 1px solid var(--vpp-rule);
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--vpp-space-3);
+    padding-top: var(--vpp-space-2);
+    padding-bottom: var(--vpp-space-2);
+    padding-left: clamp(var(--vpp-space-3), 4vw, var(--vpp-space-6));
+    padding-right: clamp(var(--vpp-space-3), 4vw, var(--vpp-space-6));
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .wordmark img {
+    display: block;
+    height: 32px;
+    width: auto;
+  }
+
+  .nav-desktop {
+    display: none;
+    align-items: center;
+    gap: var(--vpp-space-4);
+    margin-left: auto;
+    margin-right: var(--vpp-space-4);
+  }
+
+  .nav-link {
+    font-family: var(--vpp-font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--vpp-ink);
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    color: var(--vpp-signal);
+  }
+
+  .right-cluster {
+    display: flex;
+    align-items: center;
+    gap: var(--vpp-space-2);
+  }
+
+  .phone {
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--vpp-mid);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .phone:hover,
+  .phone:focus-visible {
+    color: var(--vpp-ink);
+  }
+
+  .menu-trigger {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    padding: var(--vpp-space-1) var(--vpp-space-2);
+    margin: 0;
+    cursor: pointer;
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--vpp-ink);
+    line-height: 1;
+  }
+
+  .menu-trigger:focus-visible {
+    outline: 2px solid var(--vpp-ink);
+    outline-offset: 2px;
+  }
+
+  .cta {
+    font-family: var(--vpp-font-body);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--vpp-bone);
+    background-color: var(--vpp-signal);
+    padding: var(--vpp-space-2) var(--vpp-space-3);
+    border-radius: 999px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .cta:hover,
+  .cta:focus-visible {
+    background-color: var(--vpp-ink);
+    color: var(--vpp-bone);
+  }
+
+  .mobile-panel {
+    border-top: 1px solid var(--vpp-rule);
+    background-color: var(--vpp-bone);
+    padding: var(--vpp-space-2) clamp(var(--vpp-space-3), 4vw, var(--vpp-space-6));
+  }
+
+  .mobile-panel nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    font-family: var(--vpp-font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--vpp-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--vpp-rule);
+  }
+
+  .mobile-nav-link:last-child {
+    border-bottom: 0;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link:focus-visible {
+    color: var(--vpp-signal);
+  }
+
+  @media (min-width: 768px) {
+    .wordmark img {
+      height: 36px;
+    }
+
+    .nav-desktop {
+      display: flex;
+    }
+
+    .menu-trigger,
+    .mobile-panel {
+      display: none;
+    }
+
+    .right-cluster {
+      gap: var(--vpp-space-3);
+    }
+
+    .phone {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  const trigger = document.getElementById('menu-trigger');
+  const panel = document.getElementById('mobile-panel');
+  const header = document.getElementById('site-header');
+
+  function setOpen(open: boolean) {
+    if (!trigger || !panel) return;
+    trigger.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+  }
+
+  if (trigger && panel && header) {
+    trigger.addEventListener('click', () => {
+      const open = trigger.getAttribute('aria-expanded') === 'true';
+      setOpen(!open);
+    });
+
+    document.addEventListener('click', (event) => {
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+      if (!isOpen) return;
+      const target = event.target as Node | null;
+      if (target && header.contains(target)) return;
+      setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && trigger.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        trigger.focus();
+      }
+    });
+  }
+</script>
