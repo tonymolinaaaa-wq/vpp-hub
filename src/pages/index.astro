@@ -1,50 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Promise from '../components/sections/Promise.astro';
 ---
 
-<Layout title="Valley Painting Pros — Setup complete">
-  <main class="hero">
-    <p class="eyebrow">Valley Painting Pros · Design system online</p>
-    <h1 class="headline">
-      Setup <span class="accent">complete</span>.
-    </h1>
+<Layout title="Valley Painting Pros — Painting. Done right.">
+  <Header />
+  <main>
+    <Hero />
+    <Promise />
   </main>
 </Layout>
-
-<style>
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--vpp-space-16) var(--vpp-space-3);
-    gap: var(--vpp-space-4);
-  }
-
-  .eyebrow {
-    margin: 0;
-    font-family: var(--vpp-font-mono);
-    font-weight: 500;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--vpp-mid);
-  }
-
-  .headline {
-    margin: 0;
-    font-family: var(--vpp-font-display);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    line-height: 1;
-    color: var(--vpp-ink);
-    font-size: clamp(48px, 12vw, 128px);
-  }
-
-  .accent {
-    color: var(--vpp-signal);
-  }
-</style>
