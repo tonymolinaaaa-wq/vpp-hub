@@ -5,44 +5,53 @@
 
 <section class="hero">
   <div class="hero__container">
-    <div class="hero__content">
-      <p class="hero__metadata">AZ ROC #363664 · CLASS CR-34 DUAL · A+ BBB · $1M/$2M INSURED</p>
+    <div class="hero__layout">
+      <div class="hero__content">
+        <p class="hero__metadata">AZ ROC #363664 · CLASS CR-34 DUAL · A+ BBB · $1M/$2M INSURED</p>
 
-      <h1 class="hero__headline">
-        Painting. Done <span class="hero__headline-accent">right</span>. Across the East Valley.
-      </h1>
+        <h1 class="hero__headline">
+          Painting. Done <span class="hero__headline-accent">right</span>. Across the East Valley.
+        </h1>
 
-      <p class="hero__subhead">
-        Ricardo runs every estimate himself. Every contract has a written deadline. If we miss it, you get $300 a day back.
-      </p>
+        <p class="hero__subhead">
+          Ricardo runs every estimate himself. Every contract has a written deadline. If we miss it, you get $300 a day back.
+        </p>
 
-      <div class="hero__owner-block">
-        <div class="hero__owner-photo" role="img" aria-label="Photo of Ricardo Parra, owner">
-          <span class="hero__photo-placeholder-text">PHOTO PLACEHOLDER</span>
+        <div class="hero__owner-block hero__owner-block--mobile">
+          <div class="hero__owner-photo" role="img" aria-label="Photo of Ricardo Parra, owner">
+            <span class="hero__photo-placeholder-text">PHOTO PLACEHOLDER</span>
+          </div>
+          <div class="hero__owner-text">
+            <p class="hero__owner-name">Ricardo Parra</p>
+            <p class="hero__owner-role">OWNER · RUNS EVERY ESTIMATE</p>
+          </div>
         </div>
-        <div class="hero__owner-text">
-          <p class="hero__owner-name">Ricardo Parra</p>
-          <p class="hero__owner-role">OWNER · RUNS EVERY ESTIMATE</p>
+
+        <div class="hero__promise-chips">
+          <div class="hero__chip">
+            <p class="hero__chip-eyebrow">WRITTEN GUARANTEE</p>
+            <p class="hero__chip-body">$300/day if we miss the deadline.</p>
+          </div>
+          <div class="hero__chip">
+            <p class="hero__chip-eyebrow">EVERY WORKING DAY</p>
+            <p class="hero__chip-body">4 photo updates from the job site.</p>
+          </div>
+        </div>
+
+        <div class="hero__cta-row">
+          <a class="hero__cta-primary" href="/estimate">Get your written estimate</a>
+          <a class="hero__cta-secondary" href="tel:+14804332680">
+            <span class="hero__cta-glyph" aria-hidden="true">☎</span> (480) 433-2680
+          </a>
         </div>
       </div>
 
-      <div class="hero__promise-chips">
-        <div class="hero__chip">
-          <p class="hero__chip-eyebrow">WRITTEN GUARANTEE</p>
-          <p class="hero__chip-body">$300/day if we miss the deadline.</p>
+      <aside class="hero__visual" aria-label="Owner">
+        <div class="hero__visual-photo" role="img" aria-label="Photo of Ricardo Parra, owner">
+          <span class="hero__visual-placeholder-text">PHOTO PLACEHOLDER</span>
         </div>
-        <div class="hero__chip">
-          <p class="hero__chip-eyebrow">EVERY WORKING DAY</p>
-          <p class="hero__chip-body">4 photo updates from the job site.</p>
-        </div>
-      </div>
-
-      <div class="hero__cta-row">
-        <a class="hero__cta-primary" href="/estimate">Get your written estimate</a>
-        <a class="hero__cta-secondary" href="tel:+14804332680">
-          <span class="hero__cta-glyph" aria-hidden="true">☎</span> (480) 433-2680
-        </a>
-      </div>
+        <p class="hero__visual-caption">RICARDO PARRA · OWNER</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -61,9 +70,20 @@
     padding-right: var(--vpp-space-3);
   }
 
+  .hero__layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vpp-space-8);
+  }
+
   .hero__content {
     display: flex;
     flex-direction: column;
+    min-width: 0;
+  }
+
+  .hero__visual {
+    display: none;
   }
 
   /* Metadata line */
@@ -267,13 +287,64 @@
       padding-right: var(--vpp-space-5);
     }
 
-    .hero__metadata {
-      font-size: 13px;
+    .hero__layout {
+      flex-direction: row;
+      gap: var(--vpp-space-12);
+      align-items: flex-start;
     }
 
-    .hero__owner-photo {
-      width: 120px;
-      height: 120px;
+    .hero__content {
+      flex: 1 1 60%;
+      max-width: 60%;
+    }
+
+    /* Inline owner block hidden at desktop — replaced by the right-column visual. */
+    .hero__owner-block--mobile {
+      display: none;
+    }
+
+    .hero__visual {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 40%;
+      max-width: 40%;
+    }
+
+    .hero__visual-photo {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 4 / 5;
+      background-color: var(--vpp-rule);
+      border: 1px solid var(--vpp-mid);
+      border-radius: var(--vpp-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__visual-placeholder-text {
+      font-family: var(--vpp-font-mono);
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--vpp-mid);
+      text-transform: uppercase;
+    }
+
+    .hero__visual-caption {
+      margin: var(--vpp-space-2) 0 0 0;
+      font-family: var(--vpp-font-mono);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--vpp-mid);
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+
+    .hero__metadata {
+      font-size: 13px;
     }
 
     .hero__cta-primary,
