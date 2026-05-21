@@ -34,4 +34,7 @@
   --vpp-space-14: 112px;
   --vpp-space-15: 120px;
   --vpp-space-16: 128px;
+
+  /* Border radius — single value, applied to all boxes/cards/buttons. */
+  --vpp-radius: 8px;
 }

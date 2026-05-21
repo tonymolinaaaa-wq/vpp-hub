@@ -99,6 +99,14 @@ Ricardo is not a developer. He cannot verify code-level claims himself; he relie
 
 Every text element maps to one of these three roles. No off-system fonts. No defaulting to Inter for everything.
 
+### Border radius
+
+| Token | Value | Use |
+|---|---|---|
+| `--vpp-radius` | `8px` | All boxes, cards, chips, buttons, photo placeholders. Single value applied universally. |
+
+The Header strip and full-width section frames stay edge-to-edge — radius applies to bounded objects within sections, not the section containers themselves.
+
 ### Design grammar (locked rules)
 
 1. **One-orange-word rule.** Every headline contains exactly ONE keyword in Signal Orange. The rest stays in Ink (on light backgrounds) or Bone (on dark).
