@@ -16,9 +16,13 @@ import '../styles/fonts.css';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = 'Residential painting in the East Valley of Arizona. Cabinet refinishing, interior, and exterior repaints. Owner-operated by Ricardo Parra. AZ ROC #363664. $300/day finish promise in writing on every contract.',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -26,6 +30,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
