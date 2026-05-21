@@ -1,0 +1,281 @@
+---
+// Hero.astro — first content section, Bone background.
+// IBM Plex Mono metadata + one-orange-word H1 + Ricardo named human + Promise echoes + dual CTAs.
+---
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__content">
+      <p class="hero__metadata">AZ ROC #363664 · CLASS CR-34 DUAL · A+ BBB · $1M/$2M INSURED</p>
+
+      <h1 class="hero__headline">
+        Painting. Done <span class="hero__headline-accent">right</span>. Across the East Valley.
+      </h1>
+
+      <p class="hero__subhead">
+        Ricardo runs every estimate himself. Every contract has a written deadline. If we miss it, you get $300 a day back.
+      </p>
+
+      <div class="hero__owner-block">
+        <div class="hero__owner-photo" role="img" aria-label="Photo of Ricardo Parra, owner">
+          <span class="hero__photo-placeholder-text">PHOTO PLACEHOLDER</span>
+        </div>
+        <div class="hero__owner-text">
+          <p class="hero__owner-name">Ricardo Parra</p>
+          <p class="hero__owner-role">OWNER · RUNS EVERY ESTIMATE</p>
+        </div>
+      </div>
+
+      <div class="hero__promise-chips">
+        <div class="hero__chip">
+          <p class="hero__chip-eyebrow">WRITTEN GUARANTEE</p>
+          <p class="hero__chip-body">$300/day if we miss the deadline.</p>
+        </div>
+        <div class="hero__chip">
+          <p class="hero__chip-eyebrow">EVERY WORKING DAY</p>
+          <p class="hero__chip-body">4 photo updates from the job site.</p>
+        </div>
+      </div>
+
+      <div class="hero__cta-row">
+        <a class="hero__cta-primary" href="/estimate">Get your written estimate</a>
+        <a class="hero__cta-secondary" href="tel:+14804332680">
+          <span class="hero__cta-glyph" aria-hidden="true">☎</span> (480) 433-2680
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background-color: var(--vpp-bone);
+    padding-top: var(--vpp-space-8);
+    padding-bottom: var(--vpp-space-8);
+  }
+
+  .hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--vpp-space-3);
+    padding-right: var(--vpp-space-3);
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Metadata line */
+  .hero__metadata {
+    margin: 0 0 var(--vpp-space-3) 0;
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--vpp-mid);
+    line-height: 1.5;
+  }
+
+  /* Headline */
+  .hero__headline {
+    margin: 0 0 var(--vpp-space-3) 0;
+    font-family: var(--vpp-font-display);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: 1.05;
+    color: var(--vpp-ink);
+    text-wrap: balance;
+  }
+
+  .hero__headline-accent {
+    color: var(--vpp-signal);
+  }
+
+  /* Subhead */
+  .hero__subhead {
+    margin: 0 0 var(--vpp-space-5) 0;
+    font-family: var(--vpp-font-body);
+    font-weight: 400;
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.45;
+    color: var(--vpp-ink);
+    max-width: 60ch;
+  }
+
+  /* Owner block */
+  .hero__owner-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--vpp-space-5);
+  }
+
+  .hero__owner-photo {
+    flex-shrink: 0;
+    width: 96px;
+    height: 96px;
+    background-color: var(--vpp-rule);
+    border: 1px solid var(--vpp-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--vpp-space-1);
+  }
+
+  .hero__photo-placeholder-text {
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--vpp-mid);
+    line-height: 1.3;
+  }
+
+  .hero__owner-text {
+    margin-left: var(--vpp-space-3);
+    min-width: 0;
+  }
+
+  .hero__owner-name {
+    margin: 0 0 var(--vpp-space-1) 0;
+    font-family: var(--vpp-font-body);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--vpp-ink);
+  }
+
+  .hero__owner-role {
+    margin: 0;
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--vpp-mid);
+    line-height: 1.3;
+  }
+
+  /* Promise chips */
+  .hero__promise-chips {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vpp-space-2);
+    margin-bottom: var(--vpp-space-5);
+  }
+
+  .hero__chip {
+    background-color: var(--vpp-putty);
+    border: 1px solid var(--vpp-rule);
+    padding: var(--vpp-space-2) var(--vpp-space-3);
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .hero__chip-eyebrow {
+    margin: 0 0 var(--vpp-space-1) 0;
+    font-family: var(--vpp-font-mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--vpp-mid);
+    line-height: 1.3;
+  }
+
+  .hero__chip-body {
+    margin: 0;
+    font-family: var(--vpp-font-body);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--vpp-ink);
+  }
+
+  /* CTAs */
+  .hero__cta-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vpp-space-2);
+  }
+
+  .hero__cta-primary,
+  .hero__cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--vpp-font-body);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: var(--vpp-space-3) var(--vpp-space-5);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .hero__cta-primary {
+    background-color: var(--vpp-signal);
+    color: var(--vpp-bone);
+    border: 0;
+  }
+
+  .hero__cta-primary:hover,
+  .hero__cta-primary:focus-visible {
+    background-color: color-mix(in srgb, var(--vpp-signal) 92%, black 8%);
+  }
+
+  .hero__cta-secondary {
+    background-color: transparent;
+    color: var(--vpp-ink);
+    border: 1px solid var(--vpp-ink);
+  }
+
+  .hero__cta-secondary:hover,
+  .hero__cta-secondary:focus-visible {
+    background-color: var(--vpp-ink);
+    color: var(--vpp-bone);
+  }
+
+  .hero__cta-glyph {
+    margin-right: var(--vpp-space-1);
+  }
+
+  /* Side-by-side chips and CTAs at >= 425px */
+  @media (min-width: 425px) {
+    .hero__promise-chips {
+      flex-direction: row;
+    }
+
+    .hero__cta-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Desktop refinements */
+  @media (min-width: 768px) {
+    .hero {
+      padding-top: var(--vpp-space-12);
+      padding-bottom: var(--vpp-space-12);
+    }
+
+    .hero__container {
+      padding-left: var(--vpp-space-5);
+      padding-right: var(--vpp-space-5);
+    }
+
+    .hero__metadata {
+      font-size: 13px;
+    }
+
+    .hero__owner-photo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .hero__cta-primary,
+    .hero__cta-secondary {
+      font-size: 18px;
+    }
+  }
+</style>

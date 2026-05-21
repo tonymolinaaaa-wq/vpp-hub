@@ -1,0 +1,90 @@
+---
+// Header.astro — sticky brand chrome. Logo-dominant, menu-toggle right.
+// TODO PR #3+: wire menu toggle to slide-out panel (aria-expanded, keyboard,
+// outside-click close). For now, the toggle is decorative and aria-expanded
+// stays "false".
+---
+
+<header class="header">
+  <a class="header__logo" href="/" aria-label="Valley Painting Pros home">
+    <img src="/logos/VPP_Wordmark_Horizontal.svg" alt="Valley Painting Pros" />
+  </a>
+
+  <button
+    class="header__menu-toggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+  >
+    <span class="header__menu-line"></span>
+    <span class="header__menu-line"></span>
+    <span class="header__menu-line"></span>
+  </button>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--vpp-bone);
+    border-bottom: 1px solid var(--vpp-rule);
+    padding: var(--vpp-space-2) var(--vpp-space-3);
+  }
+
+  .header__logo {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    text-decoration: none;
+  }
+
+  .header__logo img {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  .header__menu-toggle {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 44px;
+    min-height: 44px;
+    color: var(--vpp-ink);
+  }
+
+  .header__menu-toggle:focus-visible {
+    outline: 2px solid var(--vpp-ink);
+    outline-offset: 2px;
+  }
+
+  .header__menu-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      padding: var(--vpp-space-3) var(--vpp-space-5);
+    }
+
+    .header__logo img {
+      height: 48px;
+    }
+  }
+</style>
